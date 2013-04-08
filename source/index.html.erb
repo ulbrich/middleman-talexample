@@ -1,0 +1,21 @@
+---
+title: TAL-App Veriants
+intro: The following list of variants of the app is rendered from configuration
+  files provided by the TAL framework for the best user experience. All
+  versions are generated during build and can be statically deployed with only
+  an HTTP server.
+---
+
+<h1><%= data.page.title %></h1>
+
+<div class="doc">
+  <p>
+    <%= data.page.intro %>
+  </p>
+
+  <ul>
+    <% data.variants.each do |device_brand, device_model, url| %>
+      <li><%= link_to "Device \"#{device_brand}\" (model: \"#{device_model}\")", url %></li>
+    <% end %>
+  </u>
+</div>
